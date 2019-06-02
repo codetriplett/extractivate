@@ -3,7 +3,7 @@ export default function (...parameters) {
 	let structure;
 	let transform;
 
-	if (/\./.test(parameters[0])) {
+	if (/[.[]/.test(parameters[0])) {
 		selector = parameters.shift().replace(/\.$/, '') || undefined;
 	}
 
